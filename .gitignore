@@ -1,0 +1,11 @@
+# Directories
+.vs/
+Filters/Debug/
+# Prerequisites
+*.d
+
+# Compiled Object files
+*.slo
+*.lo
+*.o
+*.obj
