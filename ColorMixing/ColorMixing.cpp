@@ -156,26 +156,26 @@ void Display()
 		glPushMatrix();
 		gluLookAt(eyeX, eyeY, eyeZ, pointX, pointY, pointZ, 0.0, 1.0, 0.0);
 
-		glLightfv(GL_LIGHT0, GL_POSITION, fLightPositionUnder);	// ustawienie światła pod podłogą
+		glLightfv(GL_LIGHT0, GL_POSITION, fLightPositionUnder);	
 
 		glPushMatrix();
-		glFrontFace(GL_CW);											// zmiana domyślnego nawinięcia
-		glScalef(1.0f, -1.0f, 1.0f);								// przeskalowanie położenia wszystkich aktorów
-		DrawActors(MIRROR);												// narysowanie aktorów pod podłogą
-		glFrontFace(GL_CCW);										// przywrócenie domyślnego nawinięcia
+		glFrontFace(GL_CW);											
+		glScalef(1.0f, -1.0f, 1.0f);								
+		DrawActors(MIRROR);												
+		glFrontFace(GL_CCW);										
 		glPopMatrix();
 
-		glDisable(GL_LIGHTING);										// wyłączenie oświetlenia
+		glDisable(GL_LIGHTING);										
 
-		glEnable(GL_BLEND);											// włączenie mieszania kolorów
-		glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);			// równanie mieszania kolorów
-		DrawFloor();												// narysowanie podłogi
-		glDisable(GL_BLEND);										// wyłączenie mieszania
+		glEnable(GL_BLEND);											
+		glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);			
+		DrawFloor();												
+		glDisable(GL_BLEND);										
 
-		glEnable(GL_LIGHTING);										// włączenie oświetlenia
-		glLightfv(GL_LIGHT0, GL_POSITION, fLightPosition);			// ustawienie światła nad podłogą
+		glEnable(GL_LIGHTING);									
+		glLightfv(GL_LIGHT0, GL_POSITION, fLightPosition);			
 
-		DrawActors(MIRROR);												// narysowanie aktorów nad podłogą
+		DrawActors(MIRROR);												
 
 		glPopMatrix();
 	}
